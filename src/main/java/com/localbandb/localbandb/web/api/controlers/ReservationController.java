@@ -1,7 +1,6 @@
 package com.localbandb.localbandb.web.api.controlers;
 
 import com.google.gson.Gson;
-import com.localbandb.localbandb.services.services.CountryService;
 import com.localbandb.localbandb.services.services.PropertyService;
 import com.localbandb.localbandb.services.services.ReservationService;
 import com.localbandb.localbandb.web.api.models.PropertyViewModel;
@@ -18,14 +17,12 @@ import java.util.List;
 @RequestMapping("/reservation")
 public class ReservationController extends BaseController {
     private final ReservationService reservationService;
-    private final CountryService countryService;
     private final PropertyService propertyService;
     private final Gson gson;
 
     @Autowired
-    public ReservationController(ReservationService reservationService, CountryService countryService, PropertyService propertyService, Gson gson) {
+    public ReservationController(ReservationService reservationService, PropertyService propertyService, Gson gson) {
         this.reservationService = reservationService;
-        this.countryService = countryService;
         this.propertyService = propertyService;
         this.gson = gson;
     }

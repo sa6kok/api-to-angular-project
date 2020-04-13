@@ -16,12 +16,10 @@ import java.util.List;
 @RestController
 @RequestMapping("/property")
 public class PropertyController extends BaseController {
-    private final CountryService countryService;
     private final PropertyService propertyService;
 
     @Autowired
-    public PropertyController(CountryService countryService, PropertyService propertyService ) {
-        this.countryService = countryService;
+    public PropertyController( PropertyService propertyService ) {
         this.propertyService = propertyService;
     }
 
